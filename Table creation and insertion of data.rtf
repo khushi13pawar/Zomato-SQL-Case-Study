@@ -1,0 +1,193 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 -- SQL table creation and values updates\par
+create table Delivery_Partner (\par
+ partner_id\tab int,\par
+ partner_name varchar(30)\par
+ );\par
+\par
+insert into Delivery_Partner (partner_id, partner_name) values ( 1, 'Suresh');\par
+insert into Delivery_Partner (partner_id, partner_name) values ( 2, 'Amit');\par
+insert into Delivery_Partner (partner_id, partner_name) values (3, 'Lokesh');\par
+insert into Delivery_Partner (partner_id, partner_name) values (4, 'Kartik');\par
+insert into Delivery_Partner (partner_id, partner_name) values (5, 'Gyandeep');\par
+\par
+select * from Delivery_Partner;\par
+\par
+create table food(\par
+f_id int,\par
+f_name varchar(30),\par
+f_type varchar(15) \par
+);\par
+\par
+insert into food (f_id,f_name,f_type) values (1, 'Non-veg Pizza',' Non-veg');\par
+insert into food (f_id,f_name,f_type) values (2, 'Veg Pizza', 'Veg');\par
+insert into food (f_id,f_name,f_type) values (3, 'Choco Lava cake', 'Veg');\par
+insert into food (f_id,f_name,f_type) values (4, 'Chicken Wings',' Non-veg');\par
+insert into food (f_id,f_name,f_type) values (5, 'Chicken Popcorn', 'Non-veg');\par
+insert into food (f_id,f_name,f_type) values (6, 'Rice Meal', 'Veg');\par
+insert into food (f_id,f_name,f_type) values (7, 'Roti meal', 'Veg');\par
+insert into food (f_id,f_name,f_type) values (8, 'Masala Dosa','Veg');\par
+insert into food (f_id,f_name,f_type) values (9, 'Rava Idli','Veg');\par
+insert into food (f_id,f_name,f_type) values (10, 'Schezwan Noodles','Veg');\par
+insert into food (f_id,f_name,f_type) values (11, 'Veg Manchurian','Veg');\par
+\par
+select* from food;\par
+\par
+create table menu(\par
+menu_id\tab int,\par
+r_id int,\par
+f_id int, \par
+price float\par
+);\par
+\par
+insert into menu(menu_id, r_id, f_id, price) values (1,1,1,450);\par
+insert into menu(menu_id, r_id, f_id, price) values (2,\tab 1,\tab 2,\tab 400);\par
+insert into menu(menu_id, r_id, f_id, price) values (3,\tab 1,\tab 3,\tab 100);\par
+insert into menu(menu_id, r_id, f_id, price) values (4,\tab 2,\tab 3,\tab 115);\par
+insert into menu(menu_id, r_id, f_id, price) values (5,\tab 2,\tab 4,\tab 230);\par
+insert into menu(menu_id, r_id, f_id, price) values (6,\tab 2,\tab 5,\tab 300);\par
+insert into menu(menu_id, r_id, f_id, price) values (7,\tab 3,\tab 3,\tab 80);\par
+insert into menu(menu_id, r_id, f_id, price) values (8,\tab 3,\tab 6,\tab 160);\par
+insert into menu(menu_id, r_id, f_id, price) values (9,\tab 3,\tab 7,\tab 140);\par
+insert into menu(menu_id, r_id, f_id, price) values (10,\tab 4,\tab 6,\tab 230);\par
+insert into menu(menu_id, r_id, f_id, price) values (11, 4,\tab 8,\tab 180);\par
+insert into menu(menu_id, r_id, f_id, price) values (12, 4,\tab 9,\tab 120);\par
+insert into menu(menu_id, r_id, f_id, price) values (13,\tab 5,\tab 6,\tab 250);\par
+insert into menu(menu_id, r_id, f_id, price) values (14,\tab 5,\tab 10,\tab 220);\par
+insert into menu(menu_id, r_id, f_id, price) values (15,\tab 5,\tab 11, 180);\par
+\par
+select * from menu;\par
+\par
+create table order_details(\par
+id int,\par
+order_id int, \par
+f_id int\par
+);\par
+\par
+insert into order_details(id,order_id,f_id) values (1,\tab 1001,\tab 1);\par
+insert into order_details(id,order_id,f_id) values (2,\tab 1001,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (3,\tab 1002,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (4,\tab 1002,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (5,\tab 1003,\tab 6);\par
+insert into order_details(id,order_id,f_id) values (6,\tab 1003,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (7,\tab 1004,\tab 6);\par
+insert into order_details(id,order_id,f_id) values (8,\tab 1004,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (9,\tab 1005,\tab 7);\par
+insert into order_details(id,order_id,f_id) values (10,\tab 1005,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (11, 1006,\tab 1);\par
+insert into order_details(id,order_id,f_id) values (12, 1006,\tab 2);\par
+insert into order_details(id,order_id,f_id) values (13,\tab 1006,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (14, 1007,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (15,\tab 1007,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (16,\tab 1008,\tab 6);\par
+insert into order_details(id,order_id,f_id) values (17,\tab 1008,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (18,\tab 1009,\tab 8);\par
+insert into order_details(id,order_id,f_id) values (19,\tab 1009,\tab 9);\par
+insert into order_details(id,order_id,f_id) values (20,\tab 1010,\tab 10);\par
+insert into order_details(id,order_id,f_id) values (21,\tab 1010,\tab 11);\par
+insert into order_details(id,order_id,f_id) values (22,\tab 1010,\tab 6);\par
+insert into order_details(id,order_id,f_id) values (23,\tab 1011,\tab 1);\par
+insert into order_details(id,order_id,f_id) values (24,\tab 1012,\tab 8);\par
+insert into order_details(id,order_id,f_id) values (25,\tab 1013,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (26,\tab 1014,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (27,\tab 1015,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (28,\tab 1016,\tab 8);\par
+insert into order_details(id,order_id,f_id) values (29,\tab 1016,\tab 9);\par
+insert into order_details(id,order_id,f_id) values (30,\tab 1017,\tab 8);\par
+insert into order_details(id,order_id,f_id) values (31,\tab 1017,\tab 9);\par
+insert into order_details(id,order_id,f_id) values (32,\tab 1018,\tab 10);\par
+insert into order_details(id,order_id,f_id) values (33,\tab 1018,\tab 11);\par
+insert into order_details(id,order_id,f_id) values (34,\tab 1019,\tab 10);\par
+insert into order_details(id,order_id,f_id) values (35,\tab 1019,\tab 11);\par
+insert into order_details(id,order_id,f_id) values (36,\tab 1020,\tab 10);\par
+insert into order_details(id,order_id,f_id) values (37,\tab 1020,\tab 11);\par
+insert into order_details(id,order_id,f_id) values (38,\tab 1021,\tab 1);\par
+insert into order_details(id,order_id,f_id) values (39,\tab 1021,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (40,\tab 1022,\tab 1);\par
+insert into order_details(id,order_id,f_id) values (41,\tab 1022,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (42,\tab 1023,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (43,\tab 1023,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (44,\tab 1023,\tab 5);\par
+insert into order_details(id,order_id,f_id) values (45,\tab 1024,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (46,\tab 1024,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (47,\tab 1024,\tab 5);\par
+insert into order_details(id,order_id,f_id) values (48,\tab 1025,\tab 3);\par
+insert into order_details(id,order_id,f_id) values (49,\tab 1025,\tab 4);\par
+insert into order_details(id,order_id,f_id) values (50,\tab 1025,\tab 5);\par
+\par
+select *from order_details;\par
+\par
+create table orders(\par
+order_id int,\par
+user_id int,\par
+r_id int,\par
+amount\tab float,\par
+date date,\tab\par
+partner_id int,\par
+delivery_time\tab int,\par
+delivery_rating\tab int,\par
+restaurant_rating int \par
+);\par
+\par
+INSERT INTO orders (order_id, user_id, r_id, amount, date, partner_id, delivery_time, delivery_rating, restaurant_rating) VALUES\par
+    (1001, 1, 1, 550, '2022-10-05', 1, 25, 5, 3),\par
+    (1002, 1, 2, 415, '2022-05-26', 1, 19, 5, 2),\par
+    (1003, 1, 3, 240, '2022-06-15', 5, 29, 4, NULL),\par
+    (1004, 1, 3, 240, '2022-06-29', 4, 42, 3, 5),\par
+    (1005, 1, 3, 220, '2022-07-10', 1, 58, 1, 4),\par
+    (1006, 2, 1, 950, '2022-06-10', 2, 16, 5, NULL),\par
+    (1007, 2, 2, 530, '2022-06-23', 3, 60, 1, 5),\par
+    (1008, 2, 3, 240, '2022-07-07', 5, 33, 4, 5),\par
+    (1009, 2, 4, 300, '2022-07-17', 4, 41, 1, NULL),\par
+    (1010, 2, 5, 650, '2022-07-31', 1, 67, 1, 4),\par
+    (1011, 3, 1, 450, '2022-05-10', 2, 25, 3, 1),\par
+    (1012, 3, 4, 180, '2022-05-20', 5, 33, 4, 1),\par
+    (1013, 3, 2, 230, '2022-05-30', 4, 45, 3, NULL),\par
+    (1014, 3, 2, 230, '2022-06-11', 2, 55, 1, 2),\par
+    (1015, 3, 2, 230, '2022-06-22', 3, 21, 5, NULL),\par
+    (1016, 4, 4, 300, '2022-05-15', 3, 31, 5, 5),\par
+    (1017, 4, 4, 300, '2022-05-30', 1, 50, 1, NULL),\par
+    (1018, 4, 4, 400, '2022-06-15', 2, 40, 3, 5),\par
+    (1019, 4, 5, 400, '2022-06-30', 1, 70, 2, 4),\par
+    (1020, 4, 5, 400, '2022-07-15', 3, 26, 5, 3),\par
+    (1021, 5, 1, 550, '2022-07-01', 5, 22, 2, NULL),\par
+    (1022, 5, 1, 550, '2022-07-08', 1, 34, 5, 1),\par
+    (1023, 5, 2, 645, '2022-07-15', 4, 38, 5, 1),\par
+    (1024, 5, 2, 645, '2022-07-21', 2, 58, 2, 1),\par
+    (1025, 5, 2, 645, '2022-07-28', 2, 44, 4, NULL);\par
+\par
+select * from orders;\par
+\par
+create table restaurants (\par
+r_id int,\par
+r_name varchar(20),\par
+cuisine varchar (25)\par
+);\par
+\par
+insert into restaurants (r_id, r_name, cuisine) values (1, 'dominos', 'Italian'),\par
+(2, 'kfc', 'American'), \par
+(3, 'box8', 'North Indian'), \par
+(4, 'Dosa Plaza', 'South Indian'),\par
+(5, 'China Town', 'Chinese');\par
+\par
+select *from restaurants;\par
+\par
+create table users(user_id int,\par
+name varchar (20),\par
+email varchar(20),\par
+password varchar(15)\par
+);\par
+\par
+INSERT INTO users (user_id, name, email, password) VALUES (1, 'Nitish', 'nitish@gmail.com', 'p252h'),\par
+(2, 'Khushboo', 'khushboo@gmail.com', 'hxn9b'), \par
+(3, 'Vartika', 'vartika@gmail.com', '9hu7j'), \par
+(4, 'Ankit', 'ankit@gmail.com', 'lkko3'),\par
+(5, 'Neha', 'neha@gmail.com', '3i7qm'), \par
+(6, 'Anupama', 'anupama@gmail.com', '46rdw2'),\par
+(7, 'Rishabh', 'rishabh@gmail.com', '4sw123');\par
+\par
+select *from users;\par
+\par
+}
+ 
